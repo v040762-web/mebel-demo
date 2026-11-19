@@ -323,6 +323,12 @@
     .who { margin-top: var(--v-4); }
     .foot { padding: var(--v-4) 0; }
   }
+  /* плашка «демо для заказчика»: для показа на Kwork, в Тильду не переносится.
+     Снимается по «убери плашку демо» и при упаковке. Без анимации, видна без скролла. */
+  .demo-for { display: inline-flex; align-items: center; gap: .6em; margin: 0 0 var(--v-4);
+    font-size: var(--v-t-xs); letter-spacing: .04em; font-weight: 500; color: var(--v-ink);
+    background: color-mix(in oklab, var(--v-surface) 85%, transparent); border: 1px solid var(--v-hair-strong);
+    border-radius: 999px; padding: .42em .95em; }
 </style>
 </head>
 <body>
@@ -352,6 +358,8 @@
         <div class="v-scrim v-scrim--lead hero__scrim" aria-hidden="true"></div>
 
         <div class="hero__copy v-copy v-copy--lead">
+          <!-- плашка демо для заказчика: снимается по «убери плашку демо», в Тильду не переносится -->
+          <p class="demo-for">Демо для заказчика</p>
           <h1 class="v-display v-display--xl" data-v-cue="0 0.9 0" data-v-kinetic="lines" data-hero-cue>Кухни на заказ в {{город}} – цена до замера</h1>
           <div class="hero__rest" data-v-cue="0 0.9 0" data-v-rise="0" data-hero-cue>
             <p class="v-lede">Присылаете размеры, за день даём предварительный расчёт. Фасады привозим на замер и показываем вживую, срок изготовления пишем в договоре.</p>
